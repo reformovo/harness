@@ -1,16 +1,16 @@
 # Roles
 
-This repository starts with the smallest useful role set.
+This repository starts with a small role set.
 
 ## Core Roles
 
-- `orchestrator` - decides the workflow, breaks work into steps, and coordinates execution
-- `explorer` - gathers context, reads code, and maps the terrain
-- `fixer` - makes bounded changes inside an assigned scope
-- `reviewer` - checks risk, regressions, and completeness
-- `librarian` - looks up external documentation and reference material
+- `orchestrator` - plans and coordinates work
+- `explorer` - gathers context
+- `fixer` - makes bounded changes
+- `reviewer` - checks risk and completeness
+- `librarian` - looks up references
 
 ## Role Rule
 
 Roles are responsibilities, not identities.
-If a runtime cannot support a distinct role, the work should degrade into the smallest safe sequential flow.
+If a runtime cannot support a distinct role, the work should degrade safely.

@@ -1,23 +1,22 @@
 # Memory
 
-The memory layer stores what this harness should remember across work.
+The memory layer stores what Reform wants to remember.
 
 ## What to Record
 
-- what the owner tends to use often
-- what the owner barely uses
-- what feels valuable in practice
-- what looks good in theory but adds noise
+- what Reform uses often
+- what Reform barely uses
+- what feels valuable
+- what adds noise
 - which adapters work well
-- which workflows were worth keeping
+- which workflows are worth keeping
 
 ## What Memory Is For
 
-- reduce repeated decision making
-- make future harness choices more honest
-- preserve preferences that should outlive a single task
-- help choose the right runtime or workflow for the next job
+- reduce repeated decisions
+- preserve preferences
+- help choose the right runtime or workflow
 
 ## Memory Rule
 
-Memory should inform decisions without becoming hidden control logic.
+Memory informs decisions.

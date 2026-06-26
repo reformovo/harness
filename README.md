@@ -1,20 +1,21 @@
 # Harness
 
-> A personal, portable agent harness built from the `build-your-own-harness` method.
+> Reform's personal harness for one or more agent runtimes.
 
-This is the working repository.
-It contains the runtime-specific wiring, the default workflow, and the personal decisions that make the system useful in daily work.
+This is Reform's working repository.
+It contains the runtime wiring, skills, workflows, and preferences behind Reform's harness.
 
 The design source lives in the companion repository:
 
-- [build-your-own-harness](../build-your-own-harness/README.md)
+- [build-your-own-harness](https://github.com/reformovo/build-your-own-harness)
 
 ## What This Repository Is
 
-- a personal harness that can run on top of one or more agent runtimes
-- a small set of roles with explicit responsibilities
-- an evidence-driven workflow with clear checkpoints
-- a place to keep reusable playbooks and preferences
+- Reform's personal harness for one or more agent runtimes
+- curated skills and workflows
+- explicit responsibilities
+- evidence-driven checkpoints
+- reusable playbooks and preferences
 
 ## What This Repository Is Not
 
@@ -33,7 +34,7 @@ The design source lives in the companion repository:
 
 ## Design Principle
 
-Build your own harness, not someone else's framework.
+Reform builds a harness that fits Reform.
 
 ## Repository Shape
 

@@ -1,18 +1,18 @@
 # Vision
 
-This repository is the personal working harness.
-It exists to make agent work understandable, portable, and low-friction.
+This repository is Reform's harness.
+It keeps agent work understandable, portable, and low-friction.
 
-The goal is not to create a universal framework.
-The goal is to create a setup that matches one person's work style while remaining understandable enough to reuse.
+The goal is not a universal framework.
+The goal is a setup that matches Reform's work style.
 
 ## Optimizations
 
 - low ceremony
-- explicit capability boundaries
+- clear boundaries
 - portable runtime adapters
 - evidence-based completion
-- small, readable role definitions
+- small role definitions
 - durable personal memory
 
 ## Guiding Rule

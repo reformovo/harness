@@ -1,11 +1,13 @@
 # Workflows
 
+These workflows are for Reform.
+
 ## Default Loop
 
 1. Intake the request.
 2. Clarify the goal and constraints.
 3. Break the work into small verifiable steps.
-4. Assign each step to the smallest useful role or adapter capability.
+4. Assign each step to the smallest useful role or capability.
 5. Execute the step.
 6. Record evidence.
 7. Check the result against the acceptance criteria.
@@ -21,5 +23,4 @@
 
 ## Verification Rule
 
-Verification is not a nice-to-have.
-It is part of the workflow and must be visible in the repo.
+Verification is part of the workflow.
