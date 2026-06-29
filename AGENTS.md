@@ -11,9 +11,11 @@ This repository is Reform's personal harness for agent runtimes. It is currently
 - `configs/` - runtime and adapter configuration
 - `roles/` - role definitions and prompts
 - `skills/` - reusable workflow skills
+- `plugins/` - repo-scoped plugin bundles derived from the source manifest
 - `memory/` - Reform's preferences and prior decisions
 - `playbooks/` - repeatable task patterns
 - `.agents/skills/` - local agent skills used to maintain this repository
+- `.agents/plugins/` - repo-scoped plugin marketplace/catalog files
 
 ## Must Always
 
@@ -43,6 +45,7 @@ This repository is Reform's personal harness for agent runtimes. It is currently
 - List tracked project files: `rg --files`
 - Inspect worktree status: `git status --short`
 - Check patch whitespace: `git diff --check`
+- Validate source manifest: `python3 -m json.tool harness.json`
 
 There is no package-level lint, type-check, test, or build command yet. When executable code is added, add the real commands here in the same change and run them before declaring completion.
 

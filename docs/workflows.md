@@ -9,7 +9,7 @@ These workflows are for Reform.
 3. Break the work into small verifiable steps.
 4. Assign each step to the smallest useful role or capability.
 5. Execute the step.
-6. Record evidence.
+6. Record evidence using `evidence.md` checkpoints.
 7. Check the result against the acceptance criteria.
 8. Continue or stop based on the checkpoint.
 
@@ -20,6 +20,7 @@ These workflows are for Reform.
 - Every acceptance criterion must map to evidence.
 - Completion without evidence does not count as completion.
 - If a runtime lacks a capability, it must degrade explicitly rather than pretending to support it.
+- Evidence checkpoints must identify the claim, source, result, and next action.
 
 ## Verification Rule
 

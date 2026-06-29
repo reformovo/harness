@@ -1,1 +1,15 @@
-.agents
+# Runtime-local directories can contain generated install output, caches,
+# installed packages, logs, and user-specific state. Keep them ignored by
+# default.
+#
+# The Codex marketplace catalog is the exception: it is a repo-scoped source
+# entry, not user-local install state.
+.agents/*
+!.agents/plugins/
+!.agents/plugins/marketplace.json
+
+.codex/
+.opencode/
+
+__pycache__/
+*.pyc

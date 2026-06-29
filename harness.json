@@ -1,0 +1,104 @@
+{
+  "name": "reform-harness",
+  "description": "Reform's personal harness source contract. This describes portable harness resources and capabilities; it is not a runtime configuration.",
+  "version": "0.1.0",
+  "manifest_scope": {
+    "describes": "Reform's source harness resources and portable capabilities.",
+    "does_not_describe": "Runtime-local paths, install state, enable state, authorization grants, approval grants, or runtime-specific plugin manifests."
+  },
+  "supported_runtimes": ["codex", "opencode"],
+  "resources": {
+    "roles": {
+      "source": "roles/",
+      "items": [
+        {
+          "id": "orchestrator",
+          "path": "roles/orchestrator.md",
+          "description": "Plans and coordinates bounded work."
+        }
+      ]
+    },
+    "skills": {
+      "source": "skills/",
+      "items": [
+        {
+          "id": "skills-index",
+          "path": "skills/README.md",
+          "description": "Current index for reusable workflow skills."
+        }
+      ]
+    },
+    "memory": {
+      "source": "memory/",
+      "items": [
+        {
+          "id": "decisions",
+          "path": "memory/decisions.md",
+          "description": "Explicit durable decisions Reform has made or approved."
+        }
+      ]
+    },
+    "configs": {
+      "source": "configs/",
+      "items": []
+    },
+    "hooks": {
+      "optional": true,
+      "source": "hooks/",
+      "items": []
+    },
+    "plugins": {
+      "optional": true,
+      "source": "plugins/",
+      "items": [
+        {
+          "id": "harness",
+          "path": "plugins/harness/.codex-plugin/plugin.json",
+          "description": "Codex plugin package exposing the minimal harness skill index."
+        }
+      ]
+    }
+  },
+  "plugin_capability_model": {
+    "capability_types": ["skills", "hooks", "tools", "mcp", "apps", "assets"],
+    "state_types": {
+      "install": "Makes a resource discoverable to a target runtime.",
+      "enable": "Allows an installed resource to load or run in that runtime.",
+      "authorize": "Connects external accounts, apps, or services.",
+      "approve": "Grants trust-sensitive runtime actions such as shell access, file access, secrets, MCP servers, or hooks."
+    },
+    "adapter_rule": "Resources declare portable capabilities here; adapters translate them into runtime-specific plugin or configuration formats."
+  },
+  "plugin_capable_resources": [
+    {
+      "resource": "resources.skills",
+      "capabilities": ["skills"],
+      "states": {
+        "install": "adapter-managed",
+        "enable": "runtime-managed",
+        "authorize": "not-required",
+        "approve": "not-required"
+      }
+    },
+    {
+      "resource": "resources.hooks",
+      "capabilities": ["hooks"],
+      "states": {
+        "install": "adapter-managed",
+        "enable": "runtime-managed",
+        "authorize": "not-required",
+        "approve": "required-when-hook-can-block-or-mutate-runtime-actions"
+      }
+    },
+    {
+      "resource": "resources.plugins",
+      "capabilities": ["skills", "hooks", "tools", "mcp", "apps", "assets"],
+      "states": {
+        "install": "adapter-managed",
+        "enable": "runtime-managed",
+        "authorize": "required-when-external-apps-or-services-are-used",
+        "approve": "required-for-trust-sensitive-capabilities"
+      }
+    }
+  ]
+}
