@@ -11,14 +11,16 @@ It does not cover full orchestration, memory, evidence checkpoints, or backgroun
 
 - [ ] Add `harness.json` as the source manifest.
 - [ ] Include `name`, `description`, `version`, and `supported_runtimes`.
-- [ ] List installable resources: `roles`, `skills`, `configs`, and optional `hooks`.
+- [ ] List installable resources: `roles`, `skills`, `configs`, optional `hooks`, and optional `plugins`.
 - [ ] Document that `harness.json` describes Reform's harness, not a runtime config.
+- [ ] Keep install, enable, authorize, and approve states separate for plugin-capable resources.
 - [ ] Keep the manifest small enough to read directly.
 
 Acceptance:
 
 - [ ] A person can inspect `harness.json` and understand what the harness contains.
 - [ ] No runtime-specific paths are required in the source manifest.
+- [ ] Plugin-capable resources declare capabilities without depending on one runtime's plugin format.
 
 ## 2. Create Runtime Adapter Targets
 
@@ -28,6 +30,7 @@ Acceptance:
   - source resource
   - generated or copied runtime file
   - runtime discovery path
+- [ ] For each adapter, document how plugin capabilities map to that runtime.
 - [ ] Keep adapters limited to installation concerns.
 - [ ] Do not put methodology, task splitting, or workflow rules inside adapters.
 
@@ -42,6 +45,7 @@ Acceptance:
 - [ ] Add one minimal skill or keep `skills/README.md` as the first skill index.
 - [ ] Decide the Codex generated structure, likely `.codex-plugin/plugin.json` plus skills.
 - [ ] Decide the OpenCode generated structure, likely `.opencode` config/plugin resources.
+- [ ] Use `docs/plugins.md` as the boundary for when a skill becomes a plugin bundle.
 - [ ] Keep all content specific to Reform's harness.
 
 Acceptance:

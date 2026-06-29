@@ -19,3 +19,18 @@ The goal is a setup that matches Reform's work style.
 
 Working style is defined by humans.
 Execution is just implementation.
+
+## Foundation Rule
+
+The harness should protect the parts that stronger models do not replace:
+
+- source contracts
+- capability models
+- runtime adapters
+- workflow protocols
+- evidence standards
+- durable memory
+- extension boundaries
+- operations
+
+See `foundations.md`.
